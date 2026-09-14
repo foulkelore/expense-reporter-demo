@@ -1,0 +1,6 @@
+{
+  "inputPath": "data/expenses.csv",
+  "outputPath": "reports/report.json",
+  "startDate": "2026-01-01",
+  "endDate": "2026-01-31"
+}

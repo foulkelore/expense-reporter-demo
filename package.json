@@ -1,0 +1,30 @@
+{
+  "name": "expense-reporter-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline expense-reporting CLI for AI-assisted TypeScript to Python to Go migrations",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/cli.js",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run typecheck && npm run test:coverage && npm run build && npm run format:check"
+  },
+  "dependencies": {
+    "csv-parse": "6.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.2",
+    "@vitest/coverage-v8": "4.1.11",
+    "prettier": "3.9.6",
+    "typescript": "5.9.3",
+    "vitest": "4.1.11"
+  }
+}

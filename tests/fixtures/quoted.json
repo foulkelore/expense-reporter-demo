@@ -1,0 +1,18 @@
+{
+  "startDate": "2026-01-01",
+  "endDate": "2026-01-31",
+  "expenseCount": 3,
+  "totalCents": 33,
+  "categories": [
+    {
+      "category": "Meals",
+      "expenseCount": 2,
+      "totalCents": 13
+    },
+    {
+      "category": "Travel",
+      "expenseCount": 1,
+      "totalCents": 20
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+[
+  {
+    "name": "normal",
+    "input": "normal.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 0,
+    "stdoutFile": "normal.stdout",
+    "reportFile": "normal.json"
+  },
+  {
+    "name": "empty",
+    "input": "empty.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 0,
+    "stdoutFile": "empty.stdout",
+    "reportFile": "empty.json"
+  },
+  {
+    "name": "no-match",
+    "input": "normal.csv",
+    "startDate": "2026-02-02",
+    "endDate": "2026-02-28",
+    "exitCode": 0,
+    "stdoutFile": "no-match.stdout",
+    "reportFile": "no-match.json"
+  },
+  {
+    "name": "quoted",
+    "input": "quoted.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 0,
+    "stdoutFile": "quoted.stdout",
+    "reportFile": "quoted.json"
+  },
+  {
+    "name": "unicode",
+    "input": "unicode.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 0,
+    "stdoutFile": "unicode.stdout",
+    "reportFile": "unicode.json"
+  },
+  {
+    "name": "maximum",
+    "input": "maximum.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 0,
+    "stdoutFile": "maximum.stdout",
+    "reportFile": "maximum.json"
+  },
+  {
+    "name": "invalid-date",
+    "input": "invalid-date.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 1,
+    "stderr": "Error: record 2: date must be a valid YYYY-MM-DD date (years 0001-9999)\n"
+  },
+  {
+    "name": "invalid-amount",
+    "input": "invalid-amount.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 1,
+    "stderr": "Error: record 2: amount must be a nonnegative decimal with at most two fractional digits\n"
+  },
+  {
+    "name": "invalid-header",
+    "input": "invalid-header.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 1,
+    "stderr": "Error: CSV header must be exactly: date,category,description,amount\n"
+  },
+  {
+    "name": "malformed",
+    "input": "malformed.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 1,
+    "stderr": "Error: CSV is malformed\n"
+  },
+  {
+    "name": "overflow",
+    "input": "overflow.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 1,
+    "stderr": "Error: report total exceeds maximum safe cents (9007199254740991)\n"
+  },
+  {
+    "name": "empty-category",
+    "input": "empty-category.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 1,
+    "stderr": "Error: record 2: category must be nonempty\n"
+  },
+  {
+    "name": "overprecision",
+    "input": "overprecision.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 1,
+    "stderr": "Error: record 2: amount must be a nonnegative decimal with at most two fractional digits\n"
+  },
+  {
+    "name": "unsafe-category",
+    "input": "unsafe-category.csv",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "exitCode": 1,
+    "stderr": "Error: record 2: category must not contain control characters, line separators or |\n"
+  }
+]

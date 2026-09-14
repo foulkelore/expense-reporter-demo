@@ -1,0 +1,13 @@
+{
+  "startDate": "2026-01-01",
+  "endDate": "2026-01-31",
+  "expenseCount": 1,
+  "totalCents": 9007199254740991,
+  "categories": [
+    {
+      "category": "Maximum",
+      "expenseCount": 1,
+      "totalCents": 9007199254740991
+    }
+  ]
+}

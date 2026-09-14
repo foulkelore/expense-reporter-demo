@@ -1,0 +1,38 @@
+{
+  "startDate": "2026-01-01",
+  "endDate": "2026-01-31",
+  "expenseCount": 6,
+  "totalCents": 621,
+  "categories": [
+    {
+      "category": "A",
+      "expenseCount": 1,
+      "totalCents": 101
+    },
+    {
+      "category": "Z",
+      "expenseCount": 1,
+      "totalCents": 102
+    },
+    {
+      "category": "a",
+      "expenseCount": 1,
+      "totalCents": 103
+    },
+    {
+      "category": "é",
+      "expenseCount": 1,
+      "totalCents": 104
+    },
+    {
+      "category": "Ｚ",
+      "expenseCount": 1,
+      "totalCents": 105
+    },
+    {
+      "category": "𐀀",
+      "expenseCount": 1,
+      "totalCents": 106
+    }
+  ]
+}

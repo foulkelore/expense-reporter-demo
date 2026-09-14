@@ -1,0 +1,46 @@
+# Resume Expense Reporter Demo
+
+## Status
+
+The user resumed after the dinner pause and explicitly approved publication. The TypeScript implementation and final validation are complete. The private GitHub repository has been created; the initial commit and push are next. Do not run either migration prompt; this is the TypeScript starter.
+
+## Approved scope and publication
+
+- The latest user choice is **foulkelore/expense-reporter-demo**, superseding the earlier `source` owner. Private visibility remains the approved default.
+- The user approved building and publishing the original plan. Existing Git author was proposed and retained; inspect the current configuration before committing.
+- GitHub CLI has a saved `foulkelore` session, although another account is active. Its credential was successfully used in a child process environment to verify identity without switching global authentication. Never print credentials.
+- Existing SSH routing authenticated as the repository owner. Use the confirmed local routing for the remote push; do not change global SSH/Git settings. Machine-specific connection details are intentionally omitted from published documentation.
+- Repository absence was rechecked before creation. The newly created `foulkelore/expense-reporter-demo` was verified private and empty before the first push.
+
+## Implemented
+
+- Strict TypeScript with pinned npm dependencies, lockfile, Node 22 `.nvmrc`, Vitest coverage and Prettier.
+- `src/`: process adapter, orchestration/atomic filesystem writes, configuration, CSV parsing, date/money validation, pure reporting, domain types.
+- Six test files, **168 passing test scenarios**. Includes 14 immutable, manually authored fixture cases with byte-exact stdout/stderr/JSON/status and old-report preservation.
+- Fictional sample CSV and config. Expected report: five expenses, **9149 cents ($91.49)**.
+- `README.md`: install/run commands, behavior contract, demo walkthrough, and independent TypeScript-to-Python and Python-to-Go prompts with approval gates, scenario mapping, measured timing, fixture parity and cleanup safeguards.
+- `.github/copilot-instructions.md` and ignore/format configuration.
+
+## Validation evidence
+
+- Dependencies installed successfully with `npm install --no-fund --no-audit` (generated lockfile).
+- RED runs executed before implementing validation, config, CSV, report, application and CLI modules; corresponding GREEN runs passed.
+- `npm run format` completed successfully (fixtures excluded from formatting).
+- `npm exec --offline --yes --package=node@22 --call 'node --version && npm run check'` **passed**, using cached Node **22.23.2**. This runs typecheck, coverage tests, build and format check.
+- **168 tests passed**, six files. Coverage: 97.2% statements, 94.33% branches, 100% functions, 98.54% lines. CLI adapter is covered through subprocess assertions, excluded from in-process coverage instrumentation.
+- README agent checked local links, npm commands, sample config, fixture-exact summary/help, and both approval gates.
+- Fixture author independently audited arithmetic/bytes with Python standard library, not application-generated expectations.
+- A final read-only review agent was canceled when the user requested the pause; it produced no review results.
+- On resume, `npm exec --offline --yes --package=node@22 --call 'node --version && node -p process.execPath && npm ci --no-audit --no-fund && npm run check'` **passed** under Node 22.23.2, including a clean locked install and all 168 tests. npm noted an unapproved optional `fsevents` install script; no script approval was needed for these successful checks.
+- Actual offline runtime verification **passed** on macOS: run Node 22 under `sandbox-exec -p '(version 1)(allow default)(deny network*)'`. A loopback connection control failed with `EPERM`, proving networking was denied. Under the same profile the built `dist/cli.js` succeeded; `diff -u tests/fixtures/normal.stdout reports/summary.txt` and `diff -u tests/fixtures/normal.json reports/report.json` both passed. This verifies the TypeScript CLI, not future Python/Go environments.
+
+## Next steps
+
+1. Review the staged publishable files for secrets/generated output. Planning history is preserved, with personal machine/author details omitted from published plan text. Node modules, dist, coverage and reports are ignored.
+2. Initialize Git, inspect author configuration, stage the intended files and make the approved initial Conventional Commit. Do not manually add co-author trailers; the user's hook supplies them.
+3. Push to the already-created private repository using the confirmed SSH routing, keeping the active CLI account unchanged. Verify visibility, remote and published commit SHA.
+4. Update the build-plan checklist and report the repository URL plus concise run instructions.
+
+## Resume prompt
+
+> Resume from `.github/plans/resume-expense-reporter-demo.md`. Finish final validation and publish the approved TypeScript baseline to private `foulkelore/expense-reporter-demo`. Do not perform the Python or Go migrations.
