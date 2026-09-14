@@ -4,7 +4,7 @@
 
 Create a standalone, offline TypeScript expense-reporting CLI for a presentation demonstrating AI-assisted TypeScript-to-Python and then Python-to-Go migrations. Publish the approved baseline to GitHub and open this project in Zed. Do not convert the baseline during initial implementation.
 
-Status: implementation complete; resumed with explicit approval for private publication. Final validation and publication results are recorded in `.github/plans/resume-expense-reporter-demo.md`.
+Status: complete. The TypeScript baseline is published to the private `foulkelore/expense-reporter-demo` repository on `main`. Final validation and publication results are recorded in `.github/plans/resume-expense-reporter-demo.md`.
 
 ## Goals
 
@@ -70,5 +70,5 @@ Status: implementation complete; resumed with explicit approval for private publ
 - [x] Write README with both migration prompts and demo walkthrough.
 - [x] Add project instructions and ignore rules.
 - [x] Complete final validation: clean npm ci and Node 22 quality gate passed (168 tests); network-denied CLI execution and exact sample fixture parity passed.
-- [ ] Commit, create the remote repository, push via the confirmed work key, and verify publication.
+- [x] Commit, create the private remote repository, push via the confirmed SSH routing, and verify the published baseline commit.
 - [x] Open the new project in Zed (current workspace).

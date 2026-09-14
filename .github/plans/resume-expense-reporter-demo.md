@@ -2,7 +2,7 @@
 
 ## Status
 
-The user resumed after the dinner pause and explicitly approved publication. The TypeScript implementation and final validation are complete. The private GitHub repository has been created; the initial commit and push are next. Do not run either migration prompt; this is the TypeScript starter.
+Complete. The user resumed after the dinner pause and explicitly approved publication. The TypeScript implementation, final validation, initial commit, and push to the private GitHub repository are complete. Python and Go remain future migration exercises.
 
 ## Approved scope and publication
 
@@ -34,13 +34,16 @@ The user resumed after the dinner pause and explicitly approved publication. The
 - On resume, `npm exec --offline --yes --package=node@22 --call 'node --version && node -p process.execPath && npm ci --no-audit --no-fund && npm run check'` **passed** under Node 22.23.2, including a clean locked install and all 168 tests. npm noted an unapproved optional `fsevents` install script; no script approval was needed for these successful checks.
 - Actual offline runtime verification **passed** on macOS: run Node 22 under `sandbox-exec -p '(version 1)(allow default)(deny network*)'`. A loopback connection control failed with `EPERM`, proving networking was denied. Under the same profile the built `dist/cli.js` succeeded; `diff -u tests/fixtures/normal.stdout reports/summary.txt` and `diff -u tests/fixtures/normal.json reports/report.json` both passed. This verifies the TypeScript CLI, not future Python/Go environments.
 
-## Next steps
+## Publication completion
 
-1. Review the staged publishable files for secrets/generated output. Planning history is preserved, with personal machine/author details omitted from published plan text. Node modules, dist, coverage and reports are ignored.
-2. Initialize Git, inspect author configuration, stage the intended files and make the approved initial Conventional Commit. Do not manually add co-author trailers; the user's hook supplies them.
-3. Push to the already-created private repository using the confirmed SSH routing, keeping the active CLI account unchanged. Verify visibility, remote and published commit SHA.
-4. Update the build-plan checklist and report the repository URL plus concise run instructions.
+- Repository: <https://github.com/foulkelore/expense-reporter-demo> (private).
+- Branch: `main`, tracking `origin/main`.
+- Baseline commit: `d305b14abc28f981a95b495f692f8596147e47f3` — `feat: add offline expense reporter migration demo`.
+- The initial push succeeded and `git ls-remote --heads origin main` matched the local baseline SHA. The working tree was clean after that push.
+- The staged-file review covered 54 files: no detected private-key/token patterns or personal machine paths; no generated dependency/build/coverage/report files were staged. Planning history was preserved while omitting personal routing/author details from plan prose.
+- Git initialization activated a different inherited author email. A repository-local setting restored the previously confirmed work author; global Git settings were unchanged.
+- This completion record is a documentation-only follow-up to the published baseline.
 
-## Resume prompt
+## Using the demo
 
-> Resume from `.github/plans/resume-expense-reporter-demo.md`. Finish final validation and publish the approved TypeScript baseline to private `foulkelore/expense-reporter-demo`. Do not perform the Python or Go migrations.
+Run `npm run build` followed by `npm run --silent start`. For a fresh clone, install with `npm ci` first. When ready for the migration exercise, use the independent README prompts; each requires its own plan and explicit approval.
