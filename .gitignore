@@ -6,3 +6,5 @@ reports/
 .env
 .env.*
 *.log
+.zed/
+.github/plans/
